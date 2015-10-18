@@ -163,7 +163,7 @@ return new \Phalcon\Config(
     'github'      => array(
         'clientId'     => '7c3724d3a593eff3ebef',
         'clientSecret' => '0dede75fd2351242e51c69b4aa50ce130862ef05',
-        'redirectUri'  => 'http://dev.phanbook.com/auth/github/access_token',
+        'redirectUri'  => 'http://phanbook.local/auth/github/access_token',
         'scopes'       => ['user', 'email']
     ),
     /**
@@ -174,7 +174,7 @@ return new \Phalcon\Config(
     'google' =>array(
         'clientId' => '90283109318-91hci2ivgtsdgq1n5c6qqv4fetj3dl11.apps.googleusercontent.com',
         'clientSecret' => 'nI2o4hhEcL79PIGQ3jHtXMd8',
-        'redirectUri'  => 'http://dev.phanbook.com/auth/google/access_token'
+        'redirectUri'  => 'http://phanbook.local/auth/google/access_token'
     ),
     /**
      * Your client ID and client secret keys come from
@@ -184,7 +184,7 @@ return new \Phalcon\Config(
     'facebook' => [
         'clientId' => '375822529287502',
         'clientSecret' => 'b1f658bee406b846cd82f9cec3558662',
-        'redirectUri'  =>'http://dev.pahnbook.com/auth/facebook/access_token'
+        'redirectUri'  =>'http://phanbook.local/auth/facebook/access_token'
     ],
     /**
      * Set languages you want to it, you can see example
