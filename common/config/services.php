@@ -62,7 +62,7 @@ $di->set('config', $config, true);
 date_default_timezone_set($di->get('config')->application->timezone ?: 'UTC');
 
 /**
- * Router
+ * Loading routes from the routes.php file
  */
 $di->set(
     'router',
@@ -149,7 +149,9 @@ $di->set(
 );
 
 
-//  Setting up the view component
+/**
+ * Setting up the view component
+ */
 $di->set(
     'view',
     function () use ($di) {
@@ -196,7 +198,9 @@ $di->set(
     }
 );
 
-// Register the flash service with custom CSS classes
+/**
+ * Flash service with custom CSS classes
+ */
 $di->set(
     'flashSession',
     function () {
@@ -212,7 +216,9 @@ $di->set(
     }
 );
 
-// Database connection is created based in the parameters defined in the configuration file
+/**
+ * Database connection is created based in the parameters defined in the configuration file
+ */
 $di->set(
     'db',
     function () use ($di) {
@@ -307,6 +313,11 @@ $di->set(
     true
 );
 
+
+/**
+ * Dispatcher use a default namespace
+ */
+
 $di->set(
     'dispatcher',
     function () use ($di) {
@@ -319,6 +330,10 @@ $di->set(
         return $dispatcher;
     }
 );
+
+/**
+ * Custom authentication component
+ */
 $di->set(
     'auth',
     function () {
@@ -333,6 +348,8 @@ $di->set(
     },
     true
 );
+
+
 //Translation application use gettext
 $di->set(
     'translation',
@@ -378,6 +395,10 @@ function t($string)
     return $translation->_($string);
 }
 //Phalcon Debugger
+
+
+
+
 if ($config->application->debug) {
     (new \Phalcon\Debug)->listen();
 
