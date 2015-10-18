@@ -340,6 +340,9 @@ $di->set(
         return new Auth();
     }
 );
+
+
+
 //Real-Time notifications checker
 $di->set(
     'notifications',
