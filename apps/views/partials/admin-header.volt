@@ -53,7 +53,7 @@
                     <span class="m-b-xs block">
                       <i class="i i-paperplane i-2x text-info-lt"></i>
                     </span>
-                                <small class="text-muted">Trainning</small>
+                                <small class="text-muted">Training</small>
                             </a>
                         </div>
                     </div>

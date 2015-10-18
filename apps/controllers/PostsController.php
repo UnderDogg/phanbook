@@ -424,7 +424,7 @@ class PostsController extends ControllerBase
         if (!$object->delete()) {
             $this->saveLoger($object->getMessages());
         }
-        $this->flashSession->success(t('Data was successfully deleted do late'));
+        $this->flashSession->success(t('This post was deleted successfully'));
         return $this->indexRedirect();
     }
 
@@ -573,8 +573,8 @@ class PostsController extends ControllerBase
         if (count($tags) == 0) {
             return 'This tag does not exist';
         }
-        if (count($tags) >= 5) {
-            return 'The tags maximum allow is 5';
+        if (count($tags) >= 15) {
+            return 'The tags maximum allow is 15';
         }
         $results = [];
         foreach ($tags as $tag) {
